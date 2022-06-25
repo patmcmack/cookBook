@@ -5,4 +5,5 @@
 *.log
 *.synctex.gz
 *.toc
+*.out
 /coverPage
