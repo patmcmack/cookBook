@@ -9,15 +9,20 @@
 \usepackage{anyfontsize}
 \usepackage{hyperref}
 \usepackage{titlesec}        % adjusting document class formatting
+\usepackage{titletoc}        % adjusting document /tableofcontents
 \usepackage{multicol}
 \usepackage{changepage}
 \usepackage[margin=1.5in]{geometry} % 1.75" is default
 
+\definecolor{myColor}{RGB}{101,28,34} % Cover/accent color 
+
 % \titleformat{\chapter}[block]
 %   {\normalfont\huge\bfseries}{\thechapter.}{1em}{\Huge}
 
-
 \titlespacing*{\chapter}{0pt}{-19pt}{0pt}
+
+\dottedcontents{chapter}[4.5em]{\bfseries\normalsize\vspace{.75em}}{3.2em}{1pc} % \tableofcontents
+
 
 \renewcommand{\thechapter}{\Roman{chapter}} % Forces roman numerals 
 
@@ -83,10 +88,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\definecolor{myColor}{RGB}{101,28,34}
+
+
+
+
+
+
 
 \begin{document}
+
 \thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%% Cover Page %%%%%%%%%%%%%%%%%%%%%
 
 \begin{tikzpicture}[remember picture,overlay]
 
@@ -128,6 +141,8 @@
       \end{tikzpicture}};
 
 \end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%% Cover Page %%%%%%%%%%%%%%%%%%%%%
 
 
 \tableofcontents
