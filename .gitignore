@@ -1,0 +1,8 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.aux
+*.log
+*.synctex.gz
+*.toc
+/coverPage
