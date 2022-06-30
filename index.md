@@ -1,6 +1,10 @@
 # Personal Cookbook
 ## cookBook.pdf
-Open [``` cookBook.pdf```](https://github.com/patmcmack/cookBook/blob/Main/cookBook.pdf) to view. 
+Open [``` cookBook.pdf```](https://patmcmack.github.io/cookBook/cookBook.pdf) to view. 
+
+Open [``` source file```](https://github.com/patmcmack/cookBook/blob/Main/cookBook.pdf) to view source, might be more up to date if I messed up. 
+
+
 
 This is a cookbook I wrote simply to keep track of recipes that I enjoy, taken from multiple sources. Written in *LaTex* with design inspiration from **ORLY** textbooks.
 
