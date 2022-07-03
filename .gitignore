@@ -6,4 +6,5 @@
 *.synctex.gz
 *.toc
 *.out
+test.sh
 /coverPage
