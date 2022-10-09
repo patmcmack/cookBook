@@ -7,6 +7,7 @@
 \usepackage{tikz}            % the graphics
 \usepackage{textcomp}        % for \textregistered
 \usepackage{anyfontsize}
+\usepackage{imakeidx}        % for index
 \usepackage{hyperref}
 \usepackage{titlesec}        % adjusting document class formatting
 \usepackage{titletoc}        % adjusting document /tableofcontents
@@ -22,6 +23,8 @@
 \titlespacing*{\chapter}{0pt}{-19pt}{0pt}
 
 \dottedcontents{chapter}[4.5em]{\bfseries\normalsize\vspace{.75em}}{4.5em}{1pc} % \tableofcontents
+\makeindex[options=-s dotted, columns=1] % https://latex.org/forum/viewtopic.php?t=22245
+\indexsetup{othercode=\bfseries\normalsize\vspace{1em}}
 
 
 \renewcommand{\thechapter}{\Roman{chapter}} % Forces roman numerals 
@@ -57,7 +60,7 @@
 % }
 
 \newcommand{\meal}[5]{
-\chapter{\uppercase{#1}}  % recipe name
+\chapter{\uppercase{#1}\index{\uppercase{#1}}}  % recipe name
 \vspace{0.5cm}
 \textit{#2}\vspace{0.5cm} \\                      % description (if needed)
 {\textbf{Serves: #3}}                % serving size
@@ -1154,6 +1157,70 @@
                   \item Grill chicken on high heat for 10--12 mins total, to get good color/charr but not completely cook. Chop as desired
                   \item Transfer chicken chunks to pot of sauce. Bring to a simmer over medium heat and cook, stirring frequently, until chicken is just cooked through, about 10 minutes. Sprinkle with remaining cilantro, then serve immediately with rice or grilled naan 
             \end{enumerate}}
+
+      \meal{Chipotle Bowl}
+            {Grilled chicken with cilantro-lime rice and fiesta veggies}
+            {6--7}                % Serving Size
+            {\begin{itemize}      % Ingredients
+                  \item 5 lbs chicken Thighs
+                  \item 3--4 cups white rice (dry)
+                  \item 3--4 Limes
+                  \item 14--28 oz black Beans
+                  \item 3--4 cups frozen Corn 
+                  \item 2--3 Onions
+                  \item 3--4 Poblano Peppers 
+                  \item 1--2 cups heavy Cream 
+                  \item 2 Tbsp Chili Powder 
+                  \item 2 Tbsp Cumin 
+                  \item 2 Tbsp smoked Paprika 
+                  \item 1 Tbsp Cayenne
+                  \item Cilantro 
+                  \item 3--5 cloves Garlic 
+                  \item Achiote Paste or 3 Sazon seasoning packets 
+                  \item Oil/Mayo 
+                  \item Salt/Pepper 
+            \end{itemize}}
+            {\begin{enumerate}    % Cooking Instructions
+                  \item  Make chicken marinade in blender by adding half an onion, 2 habaneros, 1 lime zest + juice, 2 cloves garlic, Achiote or sazon, saltand oil/Mayo. Adjust thickness with water or more fat. Marniade chicken for at least one hour.
+                  \item Cook rice in rice cooker. Add salt, washed black beans, chopped cilantro and zest + juice from remaining limes. 
+                  \item In large dry pan over high heat, add corn until charred. Then add onion, peppers, garlic, salt and oil. Cook until soft, then add cumin, chili powder, cayenne and paprika to taste. After a few minutes add heavy cream until rich and a thick sauce coats the veggies. 
+                  \item Grill and chop chicken. Serve in bowl with equal parts rice and veggies 
+            \end{enumerate}}
+
+      \meal{Feijoada}
+            {Brazillian black-bean poverty stew served over rice with orange slices. Designed for any cheap off cuts of pork (trotters, necks, ears ect)}
+            {6--9}                % Serving Size
+            {\begin{itemize}      % Ingredients
+                  \item 1 lbs dry Black Beans
+                  \item 1 lbs Pork Shoilder
+                  \item 1 lbs dried (or corned or stew) Beef
+                  \item 1--2 lbs Pork Neck
+                  \item 2 smoked Ham Hocks 
+                  \item 1 lbs smoked Chorizo 
+                  \item 1/2 lbs Bacon
+                  \item 3--5 Bay leaves 
+                  \item Salt/Pepper 
+                  \item 3 Onions 
+                  \item 3 large Tomatoes
+                  \item Cilantro
+                  \item 2--4 bell Peppers 
+                  \item 2--3 Oranges 
+                  \item Kale
+                  \item Cayenne/Hot sauce 
+                  \item Rice 
+            \end{itemize}}
+            {\begin{enumerate}    % Cooking Instructions
+                  \item  Soak beans overnight, discard water. Add to largest pot and cover with 2" water. Add salt, bay leaves and chopped cilantro. Bring to a simmer
+                  \item Meanwhile, slice and slowly render bacon in seperate pan. When crisp, add to pot and set fat aside for cooking veggies 
+                  \item In batches, brown all meats (cut into 2" sized chunks) in pan and then transfer to pot. Add additional water as needed. 
+                  \item Cook diced onions and peppers in pan until soft, scraping any fonde from the bottom of the pan. Add to pot with diced tomatoes and cayenne or hot sauce
+                  \item Simmer for 5--8 hours, add water as necessary. Remove bones. Adjust seasoning with salt and acid. Then liquid should turn a deep brown and thicken slightly from the gelatin dissolved from the pork parts
+                  \item In last 30 mins of cooking, add kale to pot (washed, chopped and large stems removed)
+                  \item Serve over rice with orange slices. Excellent when reheated as leftovers 
+            \end{enumerate}}
+
+
+      \printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       % \meal{RecipeTitle}
