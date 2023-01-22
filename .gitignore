@@ -6,5 +6,8 @@
 *.synctex.gz
 *.toc
 *.out
+*.idx
+*.ilg
+*.ind
 test.sh
 /coverPage
